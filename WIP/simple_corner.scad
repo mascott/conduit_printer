@@ -17,7 +17,6 @@ module corner(){
     rotate([90,0,0])  cylinder(h = tubeLength, r = tubeInnerRadius);
     rotate([0,90,0])  cylinder(h = tubeLength, r = tubeInnerRadius);
   }
-  corner_supports();
 }
 
 module corner_support(){
@@ -35,6 +34,7 @@ module triplet(){
   rotate([90,0,0]) receptor();
   rotate([0,90,0]) receptor();
   sphere(tubeOuterRadius);
+  corner_supports();
 }
 
 module receptor(){
