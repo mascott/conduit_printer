@@ -7,25 +7,28 @@ include </Users/sxm/Projects/simple_conduit/simple_conduit_config.scad>
 // Local variables
 plateThickness = 2.5;
 tubeInnerRadius = 9;
+tubeOuterRadius = 11.5;
+
 
 // Object
 
 // translate([-50,0,0]){
-//   complete_mount();
+  complete_mount();
 // }
 
-translate([50,0,0]){
-  mirror([1,0,0]){
-    complete_mount();
-  }
-}
+// translate([50,0,0]){
+//   mirror([1,0,0]){
+//     complete_mount();
+//   }
+// }
 
+
+// Modules
 module complete_mount(){
   corner();
   translate([18,32,5]) rotate([0,0,0]) mount();
 }
 
-// Modules
 module mount(){
   top_plate();
   corner_brace();

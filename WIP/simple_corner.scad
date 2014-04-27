@@ -51,6 +51,6 @@ module drillHoles(){
 module tube(inner, outer, height){
   difference(){
     cylinder(h = height, r = outer);
-    cylinder(h = height, r = inner);
+    cylinder(h = height+.1, r = inner);
   }
 }
